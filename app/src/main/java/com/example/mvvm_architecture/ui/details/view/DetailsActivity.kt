@@ -4,13 +4,13 @@ import android.os.Bundle
 import android.widget.Toast
 import androidx.fragment.app.FragmentActivity
 import androidx.lifecycle.ViewModelProviders
-import com.example.mvvm_architecture.data.api.ApiHelper
-import com.example.mvvm_architecture.data.api.RetrofitBuilder
-import com.example.mvvm_architecture.data.model.DrinkDetail
+import com.example.core.utils.Status
+import com.example.data.api.ApiHelper
+import com.example.data.api.RetrofitBuilder
+import com.example.domain.models.LocalDrinkDetail
 import com.example.mvvm_architecture.databinding.ActivityDetailsBinding
 import com.example.mvvm_architecture.ui.base.ViewModelFactory
 import com.example.mvvm_architecture.ui.main.viewmodel.CocktailViewModel
-import com.example.mvvm_architecture.utils.Status
 import com.squareup.picasso.Picasso
 
 class DetailsActivity : FragmentActivity() {
@@ -58,7 +58,7 @@ class DetailsActivity : FragmentActivity() {
         })
     }
 
-    private fun showDrink(drinkDetail: DrinkDetail) {
+    private fun showDrink(drinkDetail: LocalDrinkDetail) {
         with(binding) {
             Picasso.with(titleTextView.context)
                 .load(drinkDetail.image)

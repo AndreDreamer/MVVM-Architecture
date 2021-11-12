@@ -7,12 +7,12 @@ import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+import com.example.domain.models.LocalDrink
 import com.example.mvvm_architecture.R
-import com.example.mvvm_architecture.data.model.Drink
 import com.example.mvvm_architecture.ui.details.view.DetailsActivity
 import com.squareup.picasso.Picasso
 
-class CocktailAdapter(private val drinks: ArrayList<Drink>) :
+class CocktailAdapter(private val drinks: ArrayList<LocalDrink>) :
     RecyclerView.Adapter<CocktailAdapter.ViewHolder>() {
 
 
@@ -21,15 +21,15 @@ class CocktailAdapter(private val drinks: ArrayList<Drink>) :
 
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-        val itemNote = drinks[position]
-        holder.bindNote(itemNote)
+        val itemDrink = drinks[position]
+        holder.bindNote(itemDrink)
     }
 
     override fun getItemCount() = drinks.size
 
     class ViewHolder(v: View) : RecyclerView.ViewHolder(v), View.OnClickListener {
         private var view: View = v
-        private var drink: Drink? = null
+        private var drink: LocalDrink? = null
         lateinit var titleTextView: TextView
         lateinit var image: ImageView
 
@@ -44,7 +44,7 @@ class CocktailAdapter(private val drinks: ArrayList<Drink>) :
             context.startActivity(myIntent)
         }
 
-        fun bindNote(drink: Drink) {
+        fun bindNote(drink: LocalDrink) {
             this.drink = drink
             titleTextView = view.findViewById(R.id.titleView)
             image = view.findViewById(R.id.imageView3)
@@ -57,10 +57,10 @@ class CocktailAdapter(private val drinks: ArrayList<Drink>) :
         }
     }
 
-    fun addDrinks(users: List<Drink>) {
+    fun addDrinks(drinks: List<LocalDrink>) {
         this.drinks.apply {
             clear()
-            addAll(users)
+            addAll(drinks)
         }
     }
 }
