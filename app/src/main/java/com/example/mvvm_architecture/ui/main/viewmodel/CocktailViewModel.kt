@@ -4,10 +4,11 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.liveData
 import com.example.data.repository.MainRepository
 import com.example.core.utils.Resource
+import com.example.domain.usecase.drink.DrinkUseCase
 import kotlinx.coroutines.Dispatchers
 
 
-class CocktailViewModel(private val useCase: MainRepository) : ViewModel() {
+class CocktailViewModel(private val useCase: DrinkUseCase) : ViewModel() {
 
     fun detailDrink(id: String) = liveData(Dispatchers.IO) {
         emit(Resource.loading(data = null))
