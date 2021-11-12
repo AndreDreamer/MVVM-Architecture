@@ -2,8 +2,8 @@ package com.example.mvvm_architecture.ui.base
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
-import com.example.mvvm_architecture.data.api.ApiHelper
-import com.example.mvvm_architecture.data.repository.MainRepository
+import com.example.data.api.ApiHelper
+import com.example.data.repository.MainRepository
 import com.example.mvvm_architecture.ui.main.viewmodel.CocktailViewModel
 
 class ViewModelFactory(private val apiHelper: ApiHelper) : ViewModelProvider.Factory {

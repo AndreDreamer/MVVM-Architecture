@@ -9,14 +9,15 @@ import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProviders
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.example.mvvm_architecture.data.api.ApiHelper
-import com.example.mvvm_architecture.data.api.RetrofitBuilder
-import com.example.mvvm_architecture.data.model.Drink
+import com.example.data.api.ApiHelper
+import com.example.data.api.RetrofitBuilder
+import com.example.data.model.Drink
 import com.example.mvvm_architecture.databinding.FragmentCocktailBinding
 import com.example.mvvm_architecture.ui.base.ViewModelFactory
 import com.example.mvvm_architecture.ui.main.adapter.CocktailAdapter
 import com.example.mvvm_architecture.ui.main.viewmodel.CocktailViewModel
-import com.example.mvvm_architecture.utils.Status
+import com.example.core.utils.Status
+import com.example.domain.models.LocalDrink
 
 
 class CocktailFragment : Fragment() {
@@ -83,7 +84,7 @@ class CocktailFragment : Fragment() {
     }
 
     @SuppressLint("NotifyDataSetChanged")
-    private fun retrieveList(drinks: List<Drink>) {
+    private fun retrieveList(drinks: List<LocalDrink>) {
         adapter.apply {
             addDrinks(drinks)
             notifyDataSetChanged()
