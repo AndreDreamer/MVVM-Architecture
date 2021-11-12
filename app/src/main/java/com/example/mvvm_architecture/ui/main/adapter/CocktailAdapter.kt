@@ -7,9 +7,8 @@ import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
-import com.example.mvvm_architecture.R
-import com.example.data.model.Drink
 import com.example.domain.models.LocalDrink
+import com.example.mvvm_architecture.R
 import com.example.mvvm_architecture.ui.details.view.DetailsActivity
 import com.squareup.picasso.Picasso
 

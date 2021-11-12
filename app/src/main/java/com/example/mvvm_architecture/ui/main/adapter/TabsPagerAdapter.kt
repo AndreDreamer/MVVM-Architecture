@@ -5,8 +5,8 @@ import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
 import androidx.lifecycle.Lifecycle
 import androidx.viewpager2.adapter.FragmentStateAdapter
-import com.example.mvvm_architecture.ui.main.view.CocktailFragment
-import com.example.mvvm_architecture.ui.main.view.OrdinaryDrinkFragment
+import com.example.mvvm_architecture.ui.main.fragments.CocktailFragment
+import com.example.mvvm_architecture.ui.main.fragments.OrdinaryDrinkFragment
 
 class TabsPagerAdapter(fm: FragmentManager, lifecycle: Lifecycle, private var numberOfTabs: Int) :
     FragmentStateAdapter(fm, lifecycle) {

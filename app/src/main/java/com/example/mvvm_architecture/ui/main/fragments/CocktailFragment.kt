@@ -1,4 +1,4 @@
-package com.example.mvvm_architecture.ui.main.view
+package com.example.mvvm_architecture.ui.main.fragments
 
 import android.annotation.SuppressLint
 import android.os.Bundle
@@ -11,7 +11,6 @@ import androidx.lifecycle.ViewModelProviders
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.data.api.ApiHelper
 import com.example.data.api.RetrofitBuilder
-import com.example.data.model.Drink
 import com.example.mvvm_architecture.databinding.FragmentCocktailBinding
 import com.example.mvvm_architecture.ui.base.ViewModelFactory
 import com.example.mvvm_architecture.ui.main.adapter.CocktailAdapter

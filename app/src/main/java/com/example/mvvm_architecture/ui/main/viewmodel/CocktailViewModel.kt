@@ -2,7 +2,6 @@ package com.example.mvvm_architecture.ui.main.viewmodel
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.liveData
-import com.example.data.repository.MainRepository
 import com.example.core.utils.Resource
 import com.example.domain.usecase.drink.DrinkUseCase
 import kotlinx.coroutines.Dispatchers
